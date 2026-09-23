@@ -21,11 +21,14 @@ class WeatherLoaded extends WeatherState {
   List<Object?> get props => [result];
 }
 
-class WeatherLoadFailue extends WeatherState {
+class WeatherLoadFailure extends WeatherState {
   final String message;
 
-  const WeatherLoadFailue(this.message);
+  const WeatherLoadFailure(this.message);
 
   @override
   List<Object?> get props => [message];
 }
+
+/// Legacy alias to preserve backward compatibility with existing tests
+typedef WeatherLoadFailue = WeatherLoadFailure;
